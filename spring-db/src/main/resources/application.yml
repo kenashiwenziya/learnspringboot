@@ -1,0 +1,8 @@
+spring:
+  profiles:
+    active: mysql
+
+#数据源加密的密钥
+jasypt:
+  encryptor:
+    password: excelsecu

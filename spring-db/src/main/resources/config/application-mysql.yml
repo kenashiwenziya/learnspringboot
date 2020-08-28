@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    master:
+      type: com.alibaba.druid.pool.DruidDataSource
+      url: jdbc:mysql://127.0.0.1:3306/pwdmaker_server?serverTimezone=Asia/Shanghai&useSSL=true&verifyServerCertificate=false
+      username: ENC(47nTR7HQf401zeVylooIurYB/ecGNorBjzWzflWouaKv8uiHUQfE2/F50dK/583Z)
+      password: ENC(JPneOQ8Thq9xWIeGOcdoWgCqfmbqvVms1y2IRSJvGsGTkH9sHzhenSaSFhGllv83)
+      driverClassName: com.mysql.cj.jdbc.Driver
+      initialSize: 10
+      minIdle: 10
+      maxActive: 50
+      maxWait: 60000
+      filters: stat
+      name: master
+    slave:
+      type: com.alibaba.druid.pool.DruidDataSource
+      url: jdbc:mysql://127.0.0.1:3306/pwdmaker_server?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8
+      username: ENC(47nTR7HQf401zeVylooIurYB/ecGNorBjzWzflWouaKv8uiHUQfE2/F50dK/583Z)
+      password: ENC(JPneOQ8Thq9xWIeGOcdoWgCqfmbqvVms1y2IRSJvGsGTkH9sHzhenSaSFhGllv83)
+      driverClassName: com.mysql.cj.jdbc.Driver
+      initialSize: 10
+      minIdle: 10
+      maxActive: 50
+      maxWait: 60000
+      filters: stat
+      name: slave
+mybatis:
+  config-location: classpath:mybatis/MybatisConfig.xml
+  mapper-locations: classpath:mapper/mysql/*.xml
+  type-aliases-package: com.excelsecu.entity
+  check-config-location: true

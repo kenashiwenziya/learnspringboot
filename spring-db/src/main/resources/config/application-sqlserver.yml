@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    master:
+      type: com.alibaba.druid.pool.DruidDataSource
+      url: jdbc:sqlserver://192.168.56.128:1433;DatabaseName=pwdmaker
+      username: sa
+      password: 3601048950
+      driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      initialSize: 10
+      minIdle: 10
+      maxActive: 50
+      maxWait: 60000
+      filters: stat
+      name: master
+    slave:
+      type: com.alibaba.druid.pool.DruidDataSource
+      url: jdbc:sqlserver://192.168.56.128:1433;DatabaseName=pwdmaker
+      username: sa
+      password: 3601048950
+      driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      initialSize: 10
+      minIdle: 10
+      maxActive: 50
+      maxWait: 60000
+      filters: stat
+      name: slave
+mybatis:
+  config-location: classpath:mybatis/MybatisConfig.xml
+  mapper-locations: classpath:mapper/sqlserver/*.xml
+  type-aliases-package: com.excelsecu.entity
+  check-config-location: true

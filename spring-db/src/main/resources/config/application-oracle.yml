@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    master:
+      type: com.alibaba.druid.pool.DruidDataSource
+      url: jdbc:oracle:thin:@localhost:1521:orcl
+      username: root
+      password: 3601048950
+      driverClassName: oracle.jdbc.OracleDriver
+      initialSize: 10
+      minIdle: 10
+      maxActive: 50
+      maxWait: 60000
+      filters: stat
+      name: master
+    slave:
+      type: com.alibaba.druid.pool.DruidDataSource
+      url: jdbc:oracle:thin:@localhost:1521:orcl
+      username: root
+      password: 3601048950
+      driverClassName: oracle.jdbc.OracleDriver
+      initialSize: 10
+      minIdle: 10
+      maxActive: 50
+      maxWait: 60000
+      filters: stat
+      name: slave
+mybatis:
+  config-location: classpath:mybatis/MybatisConfig.xml
+  mapper-locations: classpath:mapper/oracle/*.xml
+  type-aliases-package: com.excelsecu.entity
+  check-config-location: true

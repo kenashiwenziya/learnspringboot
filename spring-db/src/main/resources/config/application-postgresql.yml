@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    master:
+      type: com.alibaba.druid.pool.DruidDataSource
+      url: jdbc:postgresql://localhost:5432/postgres
+      username: postgres
+      password: 3601048950
+      driverClassName: org.postgresql.Driver
+      initialSize: 10
+      minIdle: 10
+      maxActive: 50
+      maxWait: 60000
+      filters: stat
+      name: master
+    slave:
+      type: com.alibaba.druid.pool.DruidDataSource
+      url: jdbc:postgresql://localhost:5432/postgres
+      username: postgres
+      password: 3601048950
+      driverClassName: org.postgresql.Driver
+      initialSize: 10
+      minIdle: 10
+      maxActive: 50
+      maxWait: 60000
+      filters: stat
+      name: slave
+mybatis:
+  config-location: classpath:mybatis/MybatisConfig.xml
+  mapper-locations: classpath:mapper/postgresql/*.xml
+  type-aliases-package: com.excelsecu.entity
+  check-config-location: true
