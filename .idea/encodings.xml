@@ -4,5 +4,6 @@
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-db" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-redis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-shiro" charset="UTF-8" />
   </component>
 </project>

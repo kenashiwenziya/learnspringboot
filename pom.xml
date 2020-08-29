@@ -16,6 +16,7 @@
     <modules>
         <module>spring-redis</module>
         <module>spring-db</module>
+        <module>spring-shiro</module>
     </modules>
 
     <properties>

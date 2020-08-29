@@ -8,18 +8,21 @@
         <outputRelativeToContentRoot value="true" />
         <module name="spring-db" />
         <module name="spring-redis" />
+        <module name="spring-shiro" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="learnspringboot" target="1.8" />
       <module name="spring-db" target="1.8" />
       <module name="spring-redis" target="1.8" />
+      <module name="spring-shiro" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="spring-db" options="-parameters" />
       <module name="spring-redis" options="-parameters" />
+      <module name="spring-shiro" options="-parameters" />
     </option>
   </component>
 </project>
